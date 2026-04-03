@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Assinatura - Educajacarei</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 py-10 px-4 font-sans">
+
+    <div class="max-w-3xl mx-auto">
+        <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 mb-8">
+            <div class="text-center mb-8">
+                <img src="https://www.jacarei.sp.gov.br/wp-content/uploads/2025/01/Logo-PMJ.png" alt="Logo" class="mx-auto h-20 mb-4">
+                <h1 class="text-2xl font-bold text-gray-800">Gerador de Assinatura de E-mail Institucional</h1>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-1">Nome Completo</label>
+                    <input type="text" id="inputNome" placeholder="NOME DO SERVIDOR" class="w-full p-2.5 border rounded-lg focus:ring-2 focus:ring-green-500 outline-none uppercase">
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-1">Cargo / Função</label>
+                    <input type="text" id="inputCargo" placeholder="CARGO DO SERVIDOR" class="w-full p-2.5 border rounded-lg focus:ring-2 focus:ring-green-500 outline-none uppercase">
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-1">E-mail</label>
+                    <input type="email" id="inputEmail" placeholder="exemplo@jacarei.sp.gov.br" class="w-full p-2.5 border rounded-lg focus:ring-2 focus:ring-green-500 outline-none">
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-1">Telefone / Ramal</label>
+                    <input type="text" id="inputTel" placeholder="(12) 3955-0000" class="w-full p-2.5 border rounded-lg focus:ring-2 focus:ring-green-500 outline-none">
+                </div>
+            </div>
+
+            <button onclick="gerarAssinatura()" class="w-full bg-[#1b7e4c] hover:bg-[#145e39] text-white font-bold py-3.5 rounded-lg mt-8 transition-all shadow-md">
+                Gerar Assinatura
+            </button>
+        </div>
+
+        <div id="preview-box" class="hidden bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+            <h3 class="text-gray-400 text-xs font-bold uppercase mb-6">Pré-visualização</h3>
+            
+            <div class="p-4 bg-white">
+                <div id="assinatura-render"></div>
+            </div>
+
+            <div class="mt-8 flex justify-end">
+                <button onclick="copiarAssinatura()" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-2.5 rounded-lg font-bold shadow transition">
+                    Copiar Assinatura
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
